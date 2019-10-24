@@ -1,0 +1,90 @@
+site_name: nginx Ingress Controller
+strict: true
+repo_name: "kubernetes/ingress-nginx"
+repo_url: "https://github.com/kubernetes/ingress-nginx"
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+theme:
+  name: material
+  feature:
+    tabs: true
+  logo:
+    icon: "public" # globe icon
+  palette:
+    primary: "teal"
+    accent: "green"
+  include_sidebar: true
+
+plugins:
+  - search
+
+extra_css: [extra.css]
+
+google_analytics: ["UA-118407822-1", "kubernetes.github.io"]
+
+nav:
+  - 欢迎:
+      - 欢迎: "index.md"
+      - 如何工作: "how-it-works.md"
+      - 故障排查: "troubleshooting.md"
+      - kubectl 插件: "kubectl-plugin.md"
+      - 开发: "development.md"
+  - 部署:
+      - 安装指南: "deploy/index.md"
+      - 裸机注意事项: "deploy/baremetal.md"
+      - 基于角色的访问控制(RBAC): "deploy/rbac.md"
+      - Validating Webhook (准入控制器): "deploy/validating-webhook.md"
+      - 升级: "deploy/upgrade.md"
+  - 用户指南:
+      - nginx 配置:
+          - 介绍: "user-guide/nginx-configuration/index.md"
+          - 基本用法: "user-guide/basic-usage.md"
+          - 注解: "user-guide/nginx-configuration/annotations.md"
+          - ConfigMap: "user-guide/nginx-configuration/configmap.md"
+          - 自定义nginx模板: "user-guide/nginx-configuration/custom-template.md"
+          - 日志格式: "user-guide/nginx-configuration/log-format.md"
+      - 命令行参数: "user-guide/cli-arguments.md"
+      - 自定义错误: "user-guide/custom-errors.md"
+      - 默认后端: "user-guide/default-backend.md"
+      - 暴露TCP或UDP服务: "user-guide/exposing-tcp-udp-services.md"
+      - 暴露FCGI服务: "user-guide/fcgi-services.md"
+      - 路径中的正则表达式: user-guide/ingress-path-matching.md
+      - 扩展阅读: "user-guide/external-articles.md"
+      - 杂项: "user-guide/miscellaneous.md"
+      - 安装Prometheus 和 Grafana: "user-guide/monitoring.md"
+      - 多Ingress控制器: "user-guide/multiple-ingress.md"
+      - TLS/HTTPS: "user-guide/tls.md"
+      - 第三方插件:
+          - ModSecurity Web应用程序防火墙: "user-guide/third-party-addons/modsecurity.md"
+          - OpenTracing: "user-guide/third-party-addons/opentracing.md"
+  - 示例:
+      - 介绍: "examples/index.md"
+      - 依赖: "examples/PREREQUISITES.md"
+      - 回话粘滞性: "examples/affinity/cookie/README.md"
+      - 认证:
+          - 基础认证: "examples/auth/basic/README.md"
+          - 客户端证书认证: "examples/auth/client-certs/README.md"
+          - 扩展基础认证: "examples/auth/external-auth/README.md"
+          - 扩展 OAUTH 认证: "examples/auth/oauth-external-auth/README.md"
+      - 定制化:
+          - 配置片段: "examples/customization/configuration-snippets/README.md"
+          - 定义配置: "examples/customization/custom-configuration/README.md"
+          - 定义错误: "examples/customization/custom-errors/README.md"
+          - 定义Headers: "examples/customization/custom-headers/README.md"
+          - 扩展认证: "examples/customization/external-auth-headers/README.md"
+          - 自定义DH参数以实现完美的前向保密性: "examples/customization/ssl-dh-param/README.md"
+          - 系统调整: "examples/customization/sysctl/README.md"
+      - Docker仓库: "examples/docker-registry/README.md"
+      - gRPC: "examples/grpc/README.md"
+      - 多证书结束: "examples/multi-tls/README.md"
+      - Rewrite: "examples/rewrite/README.md"
+      - 静态 IPs: "examples/static-ip/README.md"
+      - TLS 种植: "examples/tls-termination/README.md"
+      - Pod安全策略 (PSP): "examples/psp/README.md"
